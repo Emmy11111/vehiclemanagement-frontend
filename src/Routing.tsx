@@ -27,14 +27,14 @@ function Routing() {
           }
         />
 
-        <Route
+        {/* <Route
           path="/"
           element={
             <AppLayout>
               <Login />
             </AppLayout>
           }
-        />
+        /> */}
 
         <Route
           path="/login"
@@ -61,7 +61,7 @@ function Routing() {
         />
 
 <Route
-          path="/vehicles"
+          path="/"
           element={
             <DashboardLayout>
               <Vehicles />
