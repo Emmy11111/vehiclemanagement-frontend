@@ -3,7 +3,7 @@ import axiosInstance from "../util/axios";
 import { useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
-const useCarOwners = () => {
+const useEmployees = () => {
   const toast = useToast();
   const navigate = useNavigate();
   const [registerLoading, setRegisterLoading] = useState(false);
@@ -168,4 +168,4 @@ const useCarOwners = () => {
   };
 };
 
-export default useCarOwners;
+export default useEmployees;

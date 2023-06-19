@@ -29,7 +29,7 @@ import {useNavigate, useParams } from "react-router-dom";
 import { BsFillTrashFill } from "react-icons/bs";
 import * as moment from 'moment-timezone';
 
-const OwnersTable = ({
+const EmployeesTable = ({
   headers,
   data,
   loading,
@@ -48,7 +48,7 @@ const OwnersTable = ({
 
   const pagNation: any = useRef();
 
-  const tds: any = [1, 2, 3, 4, 5, 6];
+  const tds: any = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12];
   const rows: any = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   return (
@@ -85,9 +85,7 @@ const OwnersTable = ({
               {!loading && data?.length == 0 ? (
                 <>
                   <Tr _hover={{ bg: "white !important" }}>
-                    <Td></Td>
-                    <Td></Td>
-                    <Td bg={"white"} _hover={{ bg: "white" }}>
+                    <Td colSpan={12} bg={"white"} _hover={{ bg: "white" }}>
                       <Center bg={"white"} py={"45px"} w={"100%"} minW={"100%"}>
                         {searching ? (
                           <Text>No result found</Text>
@@ -114,11 +112,11 @@ const OwnersTable = ({
                                   mb={"9px"}
                                   color={"#637184"}
                                 >
-                                  Car Owners
+                                Employees
                                 </Text>
                                 <Text fontSize={"14px"} color="text.lightest">
                                   This table is currently empty, but it will
-                                  soon be populated with the list of car owners.
+                                  soon be populated with the list of employees.
                                 </Text>
                               </Box>
                             </Center>
@@ -126,8 +124,6 @@ const OwnersTable = ({
                         )}
                       </Center>
                     </Td>
-                    <Td></Td>
-                    <Td></Td>
                   </Tr>
                 </>
               ) : (
@@ -211,4 +207,4 @@ const OwnersTable = ({
   );
 };
 
-export default OwnersTable;
+export default EmployeesTable;

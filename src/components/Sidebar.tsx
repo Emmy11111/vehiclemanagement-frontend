@@ -71,17 +71,10 @@ const Sidebar = (
       </Box>
 
           <SidebarItem
-            to={`/carowners`}
-            active={pathname.startsWith("/carowners")}
-            title="Car Owners"
+            to={`/employees`}
+            active={pathname.startsWith("/employees")}
+            title="Emplyees"
             icon={<FiUsers size={24} style={{ minWidth: '24px' }} />}
-            isMdDesktop={isMdDesktop}
-          />
-          <SidebarItem
-            to={`/vehicles`}
-            active={pathname === `/vehicles`}
-            title="Vehicles"
-            icon={<AiFillCar size={24} style={{ minWidth: '24px' }} />}
             isMdDesktop={isMdDesktop}
           />
 

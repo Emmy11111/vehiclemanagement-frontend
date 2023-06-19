@@ -15,38 +15,6 @@ const useAuth = () => {
         navigate("/");
     }
 
-    const registerAdmin = async (data:any) =>{
-        try {
-            setLoading(true);
-            const res: any = await axiosInstance.post("/users/", data);
-            setLoading(false);
-
-            if (res?.data?.status == true) {
-                toast({
-                    title: "Success",
-                    description: res?.data?.message,
-                    status: "success",
-                    duration: 2000,
-                    isClosable: true,
-                    position: "top-right",
-                });
-                window.localStorage.setItem("access_token", res?.data?.access_token);
-                navigate("/carowners")
-            }
-        }
-        catch (error: any) {
-            setLoading(false);
-            toast({
-                title: "Failed",
-                description: error?.response?.data?.message || error?.message,
-                status: "error",
-                duration: 2000,
-                isClosable: true,
-                position: "top-right",
-            });
-        }
-    }
-
     const loginAdmin = async (data:any) =>{
         try {
             setLoading(true);
@@ -114,7 +82,6 @@ const useAuth = () => {
   };
 
     return {
-        registerAdmin,
         loading,
         logout,
         loginAdmin,

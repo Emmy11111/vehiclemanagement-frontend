@@ -17,7 +17,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import useCarOwners from "../../apis/useCarOwners";
+import useCarOwners from "../../apis/useEmployees";
 
 export default function CreateCarOwnerModal({
   isOpen,
@@ -40,7 +40,7 @@ export default function CreateCarOwnerModal({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setCarOwnerData((prevState:any) => ({
+    setCarOwnerData((prevState: any) => ({
       ...prevState,
       [name]: value,
     }));
@@ -75,20 +75,35 @@ export default function CreateCarOwnerModal({
         <ModalOverlay />
         <ModalContent>
           <form onSubmit={handleSubmit}>
-            <ModalHeader className="modal-header">Add car owner</ModalHeader>
+            <ModalHeader className="modal-header">Add Employee laptop</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={3}>
+             
+              <Flex columnGap={'20px'}>
               <FormControl isRequired>
-                <FormLabel className="input-labels">Owner names</FormLabel>
+                <FormLabel className="input-labels">First Name</FormLabel>
                 <Input
                   className={`form-inputs`}
                   onChange={handleInputChange}
                   value={carOwnerData.ownerName}
-                  name="ownerName"
-                  placeholder="Owner names"
+                  name="firstName"
+                  placeholder="First Name"
                 />
               </FormControl>
 
+              <FormControl isRequired>
+                <FormLabel className="input-labels">Last Name</FormLabel>
+                <Input
+                  className={`form-inputs`}
+                  onChange={handleInputChange}
+                  value={carOwnerData.ownerName}
+                  name="lastName"
+                  placeholder="Last Name"
+                />
+              </FormControl>
+              </Flex>
+
+              <Flex columnGap={'20px'}>
               <FormControl isRequired mt={3}>
                 <FormLabel className="input-labels">National ID</FormLabel>
                 <Input
@@ -128,18 +143,81 @@ export default function CreateCarOwnerModal({
                   />
                 </Flex>
               </FormControl>
+             </Flex>
 
+             <Flex columnGap={'20px'}>
               <FormControl isRequired mt={3}>
-                <FormLabel className="input-labels">Address</FormLabel>
+                <FormLabel className="input-labels">Email</FormLabel>
                 <Input
                   onChange={handleInputChange}
                   value={carOwnerData.address}
-                  name="address"
+                  name="email"
                   type={"text"}
                   className={`form-inputs `}
-                  placeholder="Address"
+                  placeholder="Email address"
+                />
+                </FormControl>
+                <FormControl isRequired mt={3}>
+                <FormLabel className="input-labels">Serial Number</FormLabel>
+                <Input
+                  onChange={handleInputChange}
+                  value={carOwnerData.serialNumber}
+                  name="serialNumber"
+                  type={"text"}
+                  className={`form-inputs`}
+                  placeholder="Serial Number"
+                />
+                </FormControl>
+                </Flex>
+
+              <Flex mt={3} columnGap={'20px'}>
+              <FormControl isRequired>
+                <FormLabel className="input-labels">Department</FormLabel>
+                <Input
+                  className={`form-inputs`}
+                  onChange={handleInputChange}
+                  value={carOwnerData.ownerName}
+                  name="department"
+                  placeholder="Department"
                 />
               </FormControl>
+
+              <FormControl isRequired>
+                <FormLabel className="input-labels">Position</FormLabel>
+                <Input
+                  className={`form-inputs`}
+                  onChange={handleInputChange}
+                  value={carOwnerData.ownerName}
+                  name="position"
+                  placeholder="Position"
+                />
+              </FormControl>
+              </Flex>
+
+              <Flex mt={3} columnGap={'20px'}>
+              <FormControl isRequired>
+                <FormLabel className="input-labels">Laptop Manufacturer</FormLabel>
+                <Input
+                  className={`form-inputs`}
+                  onChange={handleInputChange}
+                  value={carOwnerData.ownerName}
+                  name="manufacturer"
+                  placeholder="Laptop Manufacturer"
+                />
+              </FormControl>
+
+              <FormControl isRequired>
+                <FormLabel className="input-labels">Model</FormLabel>
+                <Input
+                  className={`form-inputs`}
+                  onChange={handleInputChange}
+                  value={carOwnerData.ownerName}
+                  name="model"
+                  placeholder="Model"
+                />
+              </FormControl>
+              </Flex>
+
             </ModalBody>
 
             <ModalFooter className="modal-pad">

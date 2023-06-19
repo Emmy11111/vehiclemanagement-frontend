@@ -77,27 +77,16 @@ const Login = () => {
                 type={"submit"}
                 fontWeight={"bold"}
                 fontSize={"16px"}
-                colorScheme="standard"
+                colorScheme="primary"
                 w={"100%"}
                 mb={"20px"}
                 display={"flex"}
                 columnGap={"5px"}
               >
                 <FiLogIn size={20}></FiLogIn>
-                Sign In
+                Login
               </Button>
             </Box>
-
-            <Center columnGap={"5px"}>
-              <Text>Don't have an account yet?</Text>{" "}
-              <Text
-                fontWeight={"semibold"}
-                color={"text.light"}
-                _hover={{ color: "standard.500" }}
-              >
-                <Link to={"/signup"}>Sign up</Link>
-              </Text>
-            </Center>
           </Box>
         </Center>
       </Center>

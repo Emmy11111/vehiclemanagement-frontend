@@ -7,25 +7,15 @@ import {
   useLocation,
 } from "react-router-dom";
 import AppLayout from "./layouts/UnAuthLayout";
-import Signup from "./pages/Authentication/Signup";
 import Login from "./pages/Authentication/Login";
-import CarOwners from "./pages/CarOwners";
+import Employees from "./pages/Employees";
 import DashboardLayout from "./layouts/DashboardLayout";
-import Vehicles from "./pages/Vehicles";
 import Logout from "./pages/Authentication/Logout";
 
 function Routing() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/signup"
-          element={
-            <AppLayout>
-              <Signup />
-            </AppLayout>
-          }
-        />
 
         <Route
           path="/"
@@ -52,22 +42,14 @@ function Routing() {
           }
         />
 <Route
-          path="/carowners"
+          path="/employees"
           element={
             <DashboardLayout>
-              <CarOwners />
+              <Employees />
             </DashboardLayout>
           }
         />
 
-<Route
-          path="/vehicles"
-          element={
-            <DashboardLayout>
-              <Vehicles />
-            </DashboardLayout>
-          }
-        />
       </Routes>
     </BrowserRouter>
   );
