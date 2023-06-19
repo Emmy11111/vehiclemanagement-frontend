@@ -23,7 +23,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useCarOwners from "../../apis/useEmployees";
 
 const Employees = () => {
-  const [isOpen, setIsOpen] = useState<Boolean>(false);
+  const [isOpen, setIsOpen] = useState<Boolean>(true);
   const {
     getAllLoading,
     getAllCarOwners,
