@@ -7,8 +7,93 @@ const useEmployees = () => {
   const toast = useToast();
   const navigate = useNavigate();
   const [registerLoading, setRegisterLoading] = useState(false);
-  const [owners, setOwners] = useState<any>([]);
-  const [totalOwners, setTotalOwners] = useState<number>(0);
+  const [owners, setOwners] = useState<any>([
+    {
+      first_name: "John",
+      last_name: "Doe",
+      national_identity: "1234567890123456",
+      telephone: BigInt("9876543210987654"),
+      email: "johndoe@example.com",
+      department: "IT",
+      position: "Software Engineer",
+      laptop_manufacturer: "Apple",
+      model: "MacBook Pro",
+      serial_number: "82342"
+    },
+    {
+      first_name: "John",
+      last_name: "Doe",
+      national_identity: "1234567890123456",
+      telephone: BigInt("9876543210987654"),
+      email: "johndoe@example.com",
+      department: "IT",
+      position: "Software Engineer",
+      laptop_manufacturer: "Apple",
+      model: "MacBook Pro",
+      serial_number: "82342"
+    },
+    {
+      first_name: "John",
+      last_name: "Doe",
+      national_identity: "1234567890123456",
+      telephone: BigInt("9876543210987654"),
+      email: "johndoe@example.com",
+      department: "IT",
+      position: "Software Engineer",
+      laptop_manufacturer: "Apple",
+      model: "MacBook Pro",
+      serial_number: "82342"
+    },
+    {
+      first_name: "John",
+      last_name: "Doe",
+      national_identity: "1234567890123456",
+      telephone: BigInt("9876543210987654"),
+      email: "johndoe@example.com",
+      department: "IT",
+      position: "Software Engineer",
+      laptop_manufacturer: "Apple",
+      model: "MacBook Pro",
+      serial_number: "82342"
+    },
+    {
+      first_name: "John",
+      last_name: "Doe",
+      national_identity: "1234567890123456",
+      telephone: BigInt("9876543210987654"),
+      email: "johndoe@example.com",
+      department: "IT",
+      position: "Software Engineer",
+      laptop_manufacturer: "Apple",
+      model: "MacBook Pro",
+      serial_number: "82342"
+    },
+    {
+      first_name: "John",
+      last_name: "Doe",
+      national_identity: "1234567890123456",
+      telephone: BigInt("9876543210987654"),
+      email: "johndoe@example.com",
+      department: "IT",
+      position: "Software Engineer",
+      laptop_manufacturer: "Apple",
+      model: "MacBook Pro",
+      serial_number: "82342"
+    },
+    {
+      first_name: "John",
+      last_name: "Doe",
+      national_identity: "1234567890123456",
+      telephone: BigInt("9876543210987654"),
+      email: "johndoe@example.com",
+      department: "IT",
+      position: "Software Engineer",
+      laptop_manufacturer: "Apple",
+      model: "MacBook Pro",
+      serial_number: "82342"
+    },
+  ]);
+  const [totalOwners, setTotalOwners] = useState<number>(30);
 
   const [updateLoading, setUpdateLoading] = useState(false);
   const [deleteLoading, setDeleteLoading] = useState(false);

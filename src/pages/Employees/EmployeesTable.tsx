@@ -132,16 +132,21 @@ const EmployeesTable = ({
                     return (
                       <Tr>
                         <Td>
-                          {data?.ownerName}
-                        </Td>
-                        <Td>{data?.nationalID}</Td>
-                        <Td>{data?.phoneNumber?.slice(0,3) == "250" ? data?.phoneNumber: "250"+data?.phoneNumber}</Td>
-                        <Td>{ data?.address}</Td>
-                        <Td>
-                          {moment(data.createdAt).format('MM/DD/YYYY')}
+                          {data?.first_name}
                         </Td>
                         <Td>
-                          <Menu>
+                          {data?.last_name}
+                        </Td>
+                        <Td>{data?.national_identity}</Td>
+                        <Td>{data?.telephone?.toString()?.slice(0,3) == "" ? data?.telephone: ""+data?.telephone}</Td>
+                        <Td>{data?.email}</Td>
+                        <Td>{ data?.department}</Td>
+                        <Td>{ data?.position}</Td>
+                        <Td>{data?.laptop_manufacturer}</Td>
+                        <Td>{ data?.model}</Td>
+                        <Td>{ data?.serial_number}</Td>
+                        {/* <Td> */}
+                          {/* <Menu>
                             <MenuButton
                               as={IconButton}
                               aria-label="Options"
@@ -174,8 +179,8 @@ const EmployeesTable = ({
                                 Delete
                               </MenuItem>
                             </MenuList>
-                          </Menu>
-                        </Td>
+                          </Menu> */}
+                        {/* </Td> */}
                       </Tr>
                     );
                   })}

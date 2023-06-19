@@ -31,7 +31,7 @@ const Employees = () => {
     getTotalCarOwners,
     totalOwners,
   } = useCarOwners();
-  const itemsPerPage = 10;
+  const itemsPerPage = 5;
   const location = useLocation();
   const [pageNum, setPageNum] = useState<number>(1);
   const searchParams = new URLSearchParams(location.search);
@@ -42,7 +42,7 @@ const Employees = () => {
     if (parseInt(page) > 0) {
       return setPageNum(page);
     }
-    return navigate("/employees?page=1");
+    return navigate("/?page=1");
   }, [searchParams]);
 
   const headers: any = [
@@ -77,13 +77,9 @@ const Employees = () => {
     {
       name: "Serial Number",
     },
-    {
-      name: "Signup date",
-      sortable: true,
-    },
-    {
-      name: "Manage",
-    },
+    // {
+    //   name: "Manage",
+    // },
   ];
 
   const getOwnersByPageNum = (pageNum: any) => {

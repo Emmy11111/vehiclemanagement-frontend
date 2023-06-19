@@ -69,7 +69,9 @@ const Header = ({ isMobile, isSmMobile, isMdDesktop }: { isMobile: boolean | und
                   borderRight={"none !important"}
                                 >
                                     {!isMobile &&(
-                                        <Text> {userInfo?.username}
+                    <Text>
+                      {/* {userInfo?.username} */}
+                      Emmanuel Dufitumukiza
                                             &nbsp;&nbsp;</Text>)
                                     }
                   <Box h={"55px"} width={"55px"}>

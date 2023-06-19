@@ -17,23 +17,23 @@ function Routing() {
     <BrowserRouter>
       <Routes>
 
-        <Route
+        {/* <Route
           path="/"
           element={
             <AppLayout>
               <Login />
             </AppLayout>
           }
-        />
+        /> */}
 
-        <Route
+        {/* <Route
           path="/login"
           element={
             <AppLayout>
               <Login />
             </AppLayout>
           }
-        />
+        /> */}
 
 <Route
           path="/signout"
@@ -42,7 +42,7 @@ function Routing() {
           }
         />
 <Route
-          path="/employees"
+          path="/"
           element={
             <DashboardLayout>
               <Employees />

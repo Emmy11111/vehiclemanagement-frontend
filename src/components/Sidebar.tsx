@@ -72,7 +72,7 @@ const Sidebar = (
 
           <SidebarItem
             to={`/employees`}
-            active={pathname.startsWith("/employees")}
+            active={pathname.startsWith("")}
             title="Emplyees"
             icon={<FiUsers size={24} style={{ minWidth: '24px' }} />}
             isMdDesktop={isMdDesktop}
